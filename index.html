@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gamal | Full-Stack Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="bg-animation">
+        <div class="star" style="top: 10%; left: 20%; animation-delay: 0s;"></div>
+        <div class="star" style="top: 30%; left: 70%; animation-delay: 1s;"></div>
+        <div class="star" style="top: 60%; left: 10%; animation-delay: 2s;"></div>
+        <div class="star" style="top: 80%; left: 80%; animation-delay: 3s;"></div>
+        <div class="star" style="top: 20%; left: 90%; animation-delay: 4s;"></div>
+        <div class="floating-orb" style="top: 15%; left: 15%;"></div>
+        <div class="floating-orb" style="top: 70%; right: 20%;"></div>
+        <div class="floating-orb" style="top: 40%; right: 10%;"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">Gamalaldin</span><span class="neon-dot">.</span>
+            </div>
+            <div class="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="hero-greeting">
+                        <span class="greeting-text">Hello, I'm</span>
+                    </div>
+                    <h1 class="hero-name">
+                        Gamalaldin Ibrahim<span class="neon-dot-large">.</span>
+                    </h1>
+                    <h2 class="hero-title">Full-Stack Mobile Developer</h2>
+                    <p class="hero-description">   
+                        Creating Innovative Digital Solutions |<br> Building Amazing Mobile Experiences
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">View My Work</a>
+                        <a href="#" class="btn btn-secondary" id="downloadCV">Download CV</a>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="profile-container">
+                    <div class="profile-image">
+                        <div class="profile-glow"></div>
+                        <div class="profile-placeholder">
+                            <img src="photos/profile.jpg" alt="Profile"/>
+                        </div>
+                    </div>
+                    <div class="orbit-ring ring-1"></div>
+                    <div class="orbit-ring ring-2"></div>
+                    <div class="orbit-ring ring-3"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About <span class="highlight">Me</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="text-content">
+                        <p class="lead">I'm a passionate Full-Stack Mobile Developer with a degree in Computer and Information Sciences from Zagazig University (2021–2025).</p>
+                        
+                        <p>I specialize in building robust, scalable, and user-focused mobile applications using both native Android development (Kotlin/Java) and cross-platform Flutter (Dart). With a strong foundation in computer science and hands-on experience in mobile development, I thrive at every stage of the development cycle.</p>
+                        
+                        <p>From crafting pixel-perfect UIs to implementing complex backend integrations and ensuring seamless deployment, I'm dedicated to writing clean, maintainable code and following modern development practices to deliver exceptional user experiences.</p>
+                        
+                        <p>Whether it's leveraging Android's native capabilities or creating beautiful cross-platform apps with Flutter, I'm always eager to tackle new challenges and bring innovative ideas to life in this infinite digital cosmos.</p>
+                    </div>
+                    
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-icon">
+                                <i class="fas fa-calendar-alt"></i>
+                            </div>
+                            <h3 class="stat-number">2+</h3>
+                            <p>Years Experience</p>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-icon">
+                                <i class="fas fa-project-diagram"></i>
+                            </div>
+                            <h3 class="stat-number">10+</h3>
+                            <p>Projects Completed</p>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <h3 class="stat-number">100%</h3>
+                            <p>Client Satisfaction</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-info">
+                    <div class="info-card cosmic-card">
+                        <div class="card-header">
+                            <h3>Gamalaldin Ibrahim</h3>
+                            <p class="role">Full-Stack Mobile Developer</p>
+                        </div>
+                        
+                        <div class="education-section">
+                            <h4><i class="fas fa-graduation-cap"></i> Education</h4>
+                            <div class="education-item">
+                                <h5>Computer and Information Sciences</h5>
+                                <p>Zagazig University</p>
+                                <span class="year">2021 - 2025</span>
+                            </div>
+                        </div>
+                        
+                        <div class="experience-section">
+                            <h4><i class="fas fa-briefcase"></i> Experience</h4>
+                            <div class="experience-item">
+                                <h5>Mobile App Developer</h5>
+                                <p>2+ Years of Experience</p>
+                                <span class="specialization">Android & Flutter Specialist</span>
+                            </div>
+                        </div>
+                        
+                        <a href="#contact" class="cv-download cosmic-btn">
+                            <i class="fas fa-download"></i>
+                            Download CV
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">My <span class="highlight">Skills</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card android">
+                    <div class="skill-icon android-icon">
+                        <i class="fab fa-android"></i>
+                    </div>
+                    <h3 class="skill-title">Native Development (Android)</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag android">Java</span>
+                        <span class="skill-tag android">Kotlin</span>
+                        <span class="skill-tag android">XML</span>
+                        <span class="skill-tag android">Jetpack Compose</span>
+                        <span class="skill-tag android">Coroutines</span>
+                        <span class="skill-tag android">Koin</span>
+                        <span class="skill-tag android">Hilt</span>
+                    </div>
+                </div>
+                
+                <div class="skill-card flutter">
+                    <div class="skill-icon flutter-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3 class="skill-title">Cross Platform</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag flutter">Flutter</span>
+                        <span class="skill-tag flutter">Dart</span>
+                    </div>
+                </div>
+                
+                <div class="skill-card backend">
+                    <div class="skill-icon backend-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3 class="skill-title">Backend Integration</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag backend">SQLite</span>
+                        <span class="skill-tag backend">REST APIs</span>
+                        <span class="skill-tag backend">Retrofit</span>
+                        <span class="skill-tag backend">Firebase</span>
+                        <span class="skill-tag backend">Ktor</span>
+                    </div>
+                </div>
+
+                <div class="skill-card AI">
+                    <div class="skill-icon AI-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 class="skill-title">Knowlege</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag AI">OOP & OOD</span>
+                        <span class="skill-tag AI">SOLID principles</span>
+                        <span class="skill-tag AI">Data structures</span>
+                        <span class="skill-tag AI">Algorithms</span>
+                        <span class="skill-tag AI">Clean Arch </span>
+                        <span class="skill-tag AI">MVVM</span>
+                    </div>
+                </div>
+
+                <div class="skill-card frameworks">
+                    <div class="skill-icon frameworks-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3 class="skill-title">Frameworks & Tools</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag tools">Android Studio</span>
+                        <span class="skill-tag tools">Postman</span>
+                        <span class="skill-tag tools">Visual Studio Code</span>
+                        <span class="skill-tag tools">Git & GitHub</span>
+                        <span class="skill-tag tools">Figma</span>
+                        <span class="skill-tag tools">TensorFlow lite</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured <span class="highlight">Projects</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                    <img src="photos/safe-go-bg.png" alt="safe-go App Screenshot" class="project-img">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/Gamalaldin-I/SafeGo"  target="_blank" class="project-link">GitHub</a>
+                                <!--a href="#" class="project-link">Demo</a-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">SafeGo</h3>
+                        <p class="project-description">
+                        SafeGo is a smart and modular Android 
+                        application built to improve road safety by monitoring driver 
+                        behavior using AI. It detects drowsiness, distraction, and over-speeding 
+                        in real-time using facial analysis and GPS data. The system alerts the driver 
+                        instantly and logs events, ensuring safer and more controlled journeys.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-badge">XML</span>
+                            <span class="tech-badge">Kotlin</span>
+                            <span class="tech-badge">Android sensors</span>
+                            <span class="tech-badge">CameraX</span>
+                            <span class="tech-badge">TF lite</span>
+                            <span class="tech-badge">Google maps SDK</span>
+                            <span class="tech-badge">Google cloud console APIs</span>
+                            <span class="tech-badge">Coroutines</span>
+                            <span class="tech-badge">Socket IO</span>
+                            <span class="tech-badge">Retrofit</span>
+                            <span class="tech-badge">ROOM</span>
+                            <span class="tech-badge">MVVM</span>
+                        </div>
+                    </div>
+                </div>
+               <div class="project-card">
+                    <div class="project-image">
+                    <img src="photos/possible-bg.png" alt="possible App Screenshot" class="project-img">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/Gamalaldin-I/Possible"  target="_blank" class="project-link">GitHub</a>
+                                <!--a href="#" class="project-link">Demo</a-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">SafeGo</h3>
+                        <p class="project-description">
+                       Possible is an Android application designed to help children who have difficulties in learning, such as:
+
+Dyslexia (reading difficulty)
+Dyscalculia (math difficulty)
+Dysgraphia (writing difficulty)
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-badge">XML</span>
+                            <span class="tech-badge">Kotlin</span>
+                            <span class="tech-badge">TF lite</span>
+                            <span class="tech-badge">Coroutines</span>
+                            <span class="tech-badge">Canvas</span>
+                            <span class="tech-badge">Speech to text API</span>
+                            <span class="tech-badge">Retrofit</span>
+                            <span class="tech-badge">ROOM</span>
+                            <span class="tech-badge">MVVM</span>
+                        </div>
+                    </div>
+                </div>
+              <div class="project-card">
+                    <div class="project-image">
+                    <img src="" alt="Islami App Screenshot" class="project-img">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/Gamalaldin-I/ISLAMI_APP"  target="_blank" class="project-link">GitHub</a>
+                                <!--a href="#" class="project-link">Demo</a-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Islami App</h3>
+                        <p class="project-description">
+                       A comprehensive Islamic app offering the full Quran with Tafsir, bookmarks,<br>search, sharing 
+as text or images, Islamic radio streaming, and downloadable surahs. Includes categorized 
+Azkar with audio, favorites for quick access, and customization options like dark mode and font 
+resizing.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-badge">XML</span>
+                            <span class="tech-badge">Kotlin</span>
+                            <span class="tech-badge">JSON</span>
+                            <span class="tech-badge">Coroutines</span>
+                            <span class="tech-badge">Retrofit</span>
+                            <span class="tech-badge">ROOM</span>
+                            <span class="tech-badge">MVVM</span>
+                        </div>
+                    </div>
+                </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In <span class="highlight">Touch</span></h2>
+                <div class="section-line"></div>
+                <p class="section-description">Let's discuss your next project or collaboration opportunity.</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <p>htbtjmal@email.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Phone</h3>
+                            <p>+20 1117559874</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Location</h3>
+                            <p>Mitghamr, Egypt</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-container">
+                    <form class="contact-form" id="contactForm"
+                      action="https://formspree.io/f/xgvzrpze"method="post" >
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required>
+                            <label for="name">Your Name</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required>
+                            <label for="email">Your Email</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" required>
+                            <label for="subject">Subject</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="6" required></textarea>
+                            <label for="message">Your Message</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-text">Gamal<span class="neon-dot">.</span></span>
+                </div>
+                <div class="social-links">
+                   <a href="https://www.linkedin.com/in/gamal-hataba-84a296240/" class="social-link" target="_blank"><i class="fab fa-linkedin"></i></a>
+                   <a href="https://github.com/Gamalaldin-I" class="social-link" target="_blank"><i class="fab fa-github" ></i></a>
+                   <a href="https://www.facebook.com/jamalalden.bn.hataba?locale=ar_AR" class="social-link" target="_blank"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Gamalaldin Hataba | Thanks for your visit.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
