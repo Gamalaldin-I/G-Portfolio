@@ -503,21 +503,27 @@ function createScrollProgressBar() {
     });
 }
 
-// CV Download functionality
+// CV Download functionality - FIXED VERSION
 function initializeCVDownload() {
     const downloadCVBtns = document.querySelectorAll('#downloadCV, .cv-download');
     
     downloadCVBtns.forEach(btn => {
-        btn.addEventListener('click', function(e) {
-            e.preventDefault();
-            downloadCV();
-        });
+        // Remove any existing event listeners to prevent duplicates
+        btn.removeEventListener('click', handleCVDownload);
+        
+        // Add single event listener
+        btn.addEventListener('click', handleCVDownload);
     });
+}
+
+function handleCVDownload(e) {
+    e.preventDefault();
+    downloadCV();
 }
 
 function downloadCV() {
     const link = document.createElement('a');
-    link.href = 'files/GamalHatabaCV.pdf'; // مكان الملف بتاعك
+    link.href = 'files/GamalHatabaCV.pdf'; 
     link.download = 'GamalHatabaCV.pdf';
     document.body.appendChild(link);
     link.click();
@@ -527,86 +533,7 @@ function downloadCV() {
     showNotification('📄 CV downloaded successfully!', 'success');
 }
 
-// Run on page load
-document.addEventListener('DOMContentLoaded', initializeCVDownload);
 
-function generateCVContent() {
-    return `
-GAMALALDIN IBRAHIM - Full-Stack Mobile Developer
-===============================================
-
-Contact Information:
-- Email: gamal.dev@email.com
-- Phone: +20 123 456 789
-- Location: Egypt
-- Portfolio: https://gamalaldin-portfolio.dev
-
-Professional Summary:
-=====================
-Passionate Full-Stack Mobile Developer with 2+ years of experience in building robust, scalable, 
-and user-focused mobile applications. Specialized in native Android development (Kotlin/Java) 
-and cross-platform Flutter development (Dart). Strong foundation in computer science with 
-hands-on experience across the full development lifecycle.
-
-Education:
-==========
-Computer and Information Sciences
-Zagazig University (2021-2025)
-
-Technical Skills:
-================
-Mobile Development:
-- Native Android: Java, Kotlin, XML, Jetpack Compose, Coroutines
-- Cross-Platform: Flutter, Dart, Widgets
-- Backend Integration: SQLite, REST APIs, Retrofit, Firebase
-- Tools & Frameworks: Android Studio, Postman, Visual Studio Code, Git & GitHub, Figma
-
-Experience Highlights:
-=====================
-- 2+ Years of Mobile Development Experience
-- 10+ Projects Completed Successfully  
-- 100% Client Satisfaction Rate
-- Specialized in Android & Flutter Development
-
-Key Competencies:
-================
-- Mobile UI/UX Design Implementation
-- Backend Integration & API Development
-- Database Management (SQLite, Firebase)
-- Version Control with Git
-- Agile Development Methodologies
-- Code Review and Quality Assurance
-- Performance Optimization
-- Cross-Platform Development
-
-Projects Portfolio:
-==================
-1. E-Commerce Mobile Platform
-   - Technologies: Android, Kotlin, Firebase, REST APIs
-   - Features: User authentication, payment integration, real-time updates
-
-2. Task Management Application
-   - Technologies: Flutter, Dart, SQLite, REST APIs
-   - Features: Collaborative features, drag-and-drop interface, offline support
-
-3. Analytics Dashboard Mobile App
-   - Technologies: Android, Java, Custom APIs, Data Visualization
-   - Features: Real-time data, interactive charts, push notifications
-
-Professional Approach:
-=====================
-- Clean, maintainable code following industry best practices
-- User-centered design thinking
-- Continuous learning and adaptation to new technologies
-- Strong problem-solving and debugging skills
-- Excellent communication and teamwork abilities
-
-Contact me for innovative mobile development solutions!
-======================================================
-
-Generated on: ${new Date().toLocaleDateString()}
-    `;
-}
 
 // Utility functions
 function debounce(func, wait) {
