@@ -3,7 +3,7 @@
    ================================= */
 :root {
   /* Colors */
-  --primary-blue: #6f2ceb;
+  --primary-blue: #4e53c3;
   --accent-purple: #8b5cf6;
   --dark-bg: #0a0a0a;
   --darker-bg: #050505;
@@ -131,9 +131,9 @@ body {
   width: 100%;
   height: 100%;
   z-index: -1;
-  background: radial-gradient(circle at 20% 50%, rgba(8, 0, 255, 0.071) 0%, transparent 50%),
-              radial-gradient(circle at 80% 20%, rgba(124, 77, 255, 0.305) 0%, transparent 50%),
-              radial-gradient(circle at 40% 80%, rgba(0, 115, 255, 0.041) 0%, transparent 50%);
+  background: radial-gradient(circle at 20% 50%, rgba(78, 1, 90, 0.136) 0%, transparent 50%),
+              radial-gradient(circle at 80% 20%, rgba(124, 77, 255, 0) 0%, transparent 50%),
+              radial-gradient(circle at 40% 80%, rgba(17, 38, 63, 0.149) 0%, transparent 50%);
 }
 
 .star {
@@ -440,10 +440,10 @@ body {
 
 .profile-glow {
   position: absolute;
-  inset: -20px;
+  inset: -40px;
   background: var(--gradient-primary);
   border-radius: 50%;
-  filter: blur(30px);
+  filter: blur(60px);
   opacity: 0.6;
   animation: profile-glow 3s ease-in-out infinite alternate;
 }

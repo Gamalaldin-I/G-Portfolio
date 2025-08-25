@@ -256,43 +256,54 @@ function createFloatingParticles() {
     document.body.appendChild(particleContainer);
 
     // Create random floating particles
-    for (let i = 0; i < 15; i++) {
-        createParticle(particleContainer);
+    for (let i = 0; i < 200; i++) {
+        createParticle(particleContainer,i);
     }
 }
 
-function createParticle(container) {
-    const particle = document.createElement('div');
-    particle.className = 'particle';
-    
-    const size = Math.random() * 3 + 1;
-    const x = Math.random() * window.innerWidth;
-    const y = Math.random() * window.innerHeight;
-    const duration = Math.random() * 20 + 10;
-    
-    particle.style.cssText = `
-        position: absolute;
-        width: ${size}px;
-        height: ${size}px;
-        background: var(--primary-blue);
-        border-radius: 50%;
-        left: ${x}px;
-        top: ${y}px;
-        opacity: ${Math.random() * 0.5 + 0.2};
-        box-shadow: 0 0 6px var(--primary-blue);
-        animation: float-particle ${duration}s infinite linear;
-    `;
-    
-    container.appendChild(particle);
-    
-    // Remove particle after animation completes and create a new one
-    setTimeout(() => {
-        if (particle.parentNode) {
-            particle.remove();
-        }
-        createParticle(container);
-    }, duration * 1000);
+function createParticle(container, i = 0) {
+  // تأكد إن الحاوية قابلة للتموضع النسبي
+  if (getComputedStyle(container).position === 'static') {
+    container.style.position = 'relative';
+  }
+
+  const particle = document.createElement('div');
+  particle.className = 'particle';
+
+  const size = Math.random() * 3 + 1;
+  const { clientWidth: w, clientHeight: h } = container;
+  const x = Math.random() * w;
+  const y = Math.random() * h;
+  const duration = Math.random() * 20 + 10;
+  const opacity = Math.random() * 0.5 + 0.2;
+
+  // تدوير ألوان بالتساوي
+  const palette = ['var(--text-primary)', 'var(--primary-blue)', 'var(--accent)','var(--neon-red)','var(--neon-orange)'];
+  const color = palette[i % 5];
+
+  // ستايل سريع ونضيف
+  Object.assign(particle.style, {
+    position: 'absolute',
+    width: `${size}px`,
+    height: `${size}px`,
+    background: color,
+    borderRadius: '50%',
+    left: `${x}px`,
+    top: `${y}px`,
+    opacity: `${opacity}`,
+    boxShadow: `0 0 6px ${color}`,
+    animation: `float-particle ${duration}s infinite linear`
+  });
+
+  container.appendChild(particle);
+
+  // remove + recreate
+  setTimeout(() => {
+    if (particle.parentNode) particle.remove();
+    createParticle(container, i + 1);
+  }, duration * 1000);
 }
+
 
 function createMouseFollowEffect() {
     // Only create cursor effect on desktop
